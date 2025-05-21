@@ -1,15 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("Задание №1: Демонстрация класса MyDate");
+        MyDate date1 = new MyDate();
+        MyDate date2 = new MyDate(34355555133101L);
+        System.out.println("Дата 1: " + date1.getYear() + "-" + (date1.getMonth() + 1) + "-" + date1.getDay());
+        System.out.println("Дата 2: " + date2.getYear() + "-" + (date2.getMonth() + 1) + "-" + date2.getDay());
+
+        System.out.println("\nЗадание №2: Первые 10 чисел с 50 десятичными цифрами, кратные 2 или 3");
+        LargeNumbers.findLargeNumbers();
+
+        System.out.println("\nЗадание №3: Первые 10 квадратных чисел, превышающих Long.MAX_VALUE");
+        SquareNumbers.findLargeSquares();
     }
 }
